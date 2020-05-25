@@ -1,0 +1,14 @@
+1. Unable to push to Git
+	Error: remote: Permission to raosinga6/rsml.git denied to kotisingam.
+			fatal: unable to access 'https://github.com/raosinga6/rsml.git/': The requested URL returned error: 403
+	Solution:
+		Remove git credentials from 
+			Control Panel\User Accounts\Credential Manager
+		And then
+		$ git credential reject
+			protocol=https
+			host=github.com
+		
+		$ git credential fill
+		protocol=https
+		host=girhub.com
